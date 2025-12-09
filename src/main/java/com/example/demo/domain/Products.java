@@ -19,9 +19,13 @@ public class Products {
     @Column(nullable = false)
     private Long price;
 
+    private String serialNumber;
+
+    @Column(nullable = true)
+    private Float royaltyPercentage;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "album_id", nullable = false)
-    private Albums albums;
-
+    private Albums album;
 
 }
